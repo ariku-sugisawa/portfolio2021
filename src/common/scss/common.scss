@@ -54,7 +54,7 @@
   max-width: 960px;
   height: 120px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 5px 10px;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 100;
   transition: 0.2s;
@@ -75,12 +75,14 @@
     width: 100%;
 
     &__logo {
-      width: 120px;
-      @include sp {
-        width: 100px;
-      }
+      display: block;
+      flex-shrink: 0;
       img {
-        width: 100%;
+        vertical-align: top;
+        width: 120px;
+        @include sp {
+          width: 90px;
+        }
       }
       img:hover {
         opacity: 0.7;
@@ -91,6 +93,7 @@
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
+      flex-shrink: 1;
 
       li:not(:last-child) {
         margin-right: 50px;
@@ -102,9 +105,9 @@
   }
 }
 .header.is-scroll {
-  height: 80px;
+  height: 90px;
   @include sp {
-    height: 60px;
+    height: 70px;
   }
 }
 
