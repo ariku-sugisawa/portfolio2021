@@ -259,18 +259,26 @@
 }
 
 .flexBox-2col {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+	width: 100%;
 
-  img {
-    display: block;
-    width: 48%;
-    height: auto;
-  }
+  > .flexItem {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
 
-  .fleItem {
-    width: 48%;
-  }
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		img {
+			display: block;
+			width: 48%;
+			height: auto;
+		}
+		p {
+			width: 48%;
+		}
+	}
 }
