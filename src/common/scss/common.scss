@@ -37,10 +37,7 @@
   }
 }
 .c-container.is-scroll {
-  padding-top: 80px;
-  @include sp {
-    padding-top: 60px;
-  }
+  padding-top: 60px;
 }
 
 // header ヘッダー要素
@@ -106,10 +103,7 @@
   }
 }
 .header.is-scroll {
-  height: 80px;
-  @include sp {
-    height: 60px;
-  }
+  height: 60px;
 }
 
 // footer フッター要素
