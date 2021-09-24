@@ -119,6 +119,12 @@ button * {
   border-bottom: 1px dotted var(--gray03);
 }
 
+p {
+  overflow-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
 sup,
 sub {
   font-size: 0.6em;
@@ -130,6 +136,14 @@ sub {
   vertical-align: bottom;
 }
 
+//webfont
+.font-marydale {
+  font-family: marydale, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// loading animation
 #loading {
   width: 100vw;
   height: 100vh;
@@ -163,4 +177,13 @@ sub {
     transform: scale(1);
     opacity: 0;
   }
+}
+
+// utility
+.txt-small {
+  font-size: 80%;
+}
+
+.txt-right {
+  text-align: right;
 }

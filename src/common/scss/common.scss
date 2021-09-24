@@ -25,7 +25,6 @@
 .c-container {
   position: relative;
   max-width: 960px;
-  height: 5000px;
   transition: 0.2s;
   margin: {
     left: auto;
@@ -178,4 +177,100 @@
 .main {
   padding: 20px;
   background-color: var(--lightgray);
+
+  h2 {
+    font-size: 2.4rem;
+    position: relative;
+    line-height: 1.4;
+    padding: 0.25em 1em;
+    display: inline-block;
+    top: 0;
+    margin: 40px 0 20px;
+  }
+
+  h2:before,
+  h2:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 8px;
+    height: 100%;
+    display: inline-block;
+  }
+  h2:before {
+    border-left: solid 1px black;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    left: 0;
+  }
+  h2:after {
+    content: '';
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+    right: 0;
+  }
+
+  h3 {
+  }
+
+  h3 > .font-marydale {
+    display: inline-block;
+    font-size: 4rem;
+    margin: 40px 0 20px;
+  }
+
+  .txt-01 {
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+  }
+}
+
+.flexBox-3col {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+
+  .flexItem {
+    padding: 20px;
+    width: 32%;
+
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 2%;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 20px;
+    }
+
+    @include sp {
+      width: 100%;
+
+      &:not(:nth-child(3n + 3)) {
+        margin-right: 0;
+      }
+
+      &:nth-child(n + 2) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.flexBox-2col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img {
+    display: block;
+    width: 48%;
+    height: auto;
+  }
+
+  .fleItem {
+    width: 48%;
+  }
 }
