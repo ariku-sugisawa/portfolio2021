@@ -79,9 +79,9 @@
       flex-shrink: 0;
       img {
         vertical-align: top;
-        width: 120px;
+        width: 100px;
         @include sp {
-          width: 90px;
+          width:80px;
         }
       }
       img:hover {
@@ -105,9 +105,9 @@
   }
 }
 .header.is-scroll {
-  height: 90px;
+  height: 80px;
   @include sp {
-    height: 70px;
+    height: 60px;
   }
 }
 
