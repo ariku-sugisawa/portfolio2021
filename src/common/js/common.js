@@ -14,7 +14,19 @@ $(function() {
 
   /* 以下各種処理を記述 */
 
+function toggleNav() {
+  var body = document.body;
+  var hamburger = document.getElementById('js-hamburger');
+  var blackBg = document.getElementById('js-hamburger-bg');
 
+  hamburger.addEventListener('click', function () {
+    body.classList.toggle('navOpen');
+  });
+  blackBg.addEventListener('click', function () {
+    body.classList.remove('navOpen');
+  });
+}
+toggleNav();
 
 
 

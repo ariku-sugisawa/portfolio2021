@@ -2,39 +2,6 @@
 // Foundation
 // ==========================================================================
 
-// ページ全体の配色とテキスト
-
-html {
-  background-color: #fff;
-  color: #333;
-  line-height: 1.5;
-}
-
-// figure要素のデフォルト左右marginを詰める
-
-figure {
-  margin: {
-    left: 0;
-    right: 0;
-  }
-}
-
-// メディア要素をコンテナ幅に収める
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  max-width: 100%;
-}
-
-// デスクトップ時に電話番号リンクを無効化
-
-html:not(.ua-mobile) [href^="tel:"] {
-  pointer-events: none;
-}
 
 // ==========================================================================
 // Layout
@@ -55,7 +22,9 @@ html:not(.ua-mobile) [href^="tel:"] {
 // ==========================================================================
 
 .c-container {
+	position: relative;
   max-width: 960px;
+	height: 5000px;
   margin: {
     left: auto;
     right: auto;
@@ -66,23 +35,45 @@ html:not(.ua-mobile) [href^="tel:"] {
   }
 }
 
-// .u-hidden: メディアクエリ別表示切り分け
+// header ヘッダー要素
 // ==========================================================================
+header {
+	position: sticky;
+	top: 0;
+	padding: 20px 0;
+	.header {
+		&__wrap {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			&__logo {
+				width: 100px;
+				img {
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
 
-// モバイル用表示
-// iPadの横幅を想定しブレークポイントを設定
+			&__menu {
+				display: flex;
+				justify-content: flex-end;
+				flex-wrap: wrap;
+				width: calc(100% - 200px);
 
-@media (max-width: 767px) {
-  .u-hidden-sp {
-    display: none !important;
-  }
+				li:not(:last-child) {
+					margin-right: 50px;
+				}
+			}
+		}
+	}
 }
 
-// デスクトップ用表示
-// iPadの横幅を想定しブレークポイントを設定
-
-@media (min-width: 768px) {
-  .u-hidden-pc {
-    display: none !important;
-  }
+// footer フッター要素
+// ==========================================================================
+footer {
+	position: sticky;
+	bottom: 0;
+	padding: 20px 0;
 }
