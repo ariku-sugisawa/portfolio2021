@@ -97,6 +97,10 @@ object {
   height: auto;
 }
 
+img [src$=".svg"] {
+    width: 100%;
+}
+
 a,
 button {
   text-decoration: none;
