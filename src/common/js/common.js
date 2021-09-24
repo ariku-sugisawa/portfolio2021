@@ -1,5 +1,4 @@
-$(function() {
-
+$(function () {
   'use strict';
 
   // ==========================================================================
@@ -14,20 +13,26 @@ $(function() {
 
   /* 以下各種処理を記述 */
 
-function toggleNav() {
-  var body = document.body;
-  var hamburger = document.getElementById('js-hamburger');
-  var blackBg = document.getElementById('js-hamburger-bg');
+  window.onload = function () {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+  };
 
-  hamburger.addEventListener('click', function () {
-    body.classList.toggle('navOpen');
+  $(function () {
+    var $win = $(window),
+      $header = $('header'),
+      $container = $('c-container'),
+      animationClass = 'is-scroll';
+
+    $win.on('load scroll', function () {
+      var value = $(this).scrollTop();
+      if (value > 100) {
+        $header.addClass(animationClass);
+        $container.addClass(animationClass);
+      } else {
+        $header.removeClass(animationClass);
+        $container.removeClass(animationClass);
+      }
+    });
   });
-  blackBg.addEventListener('click', function () {
-    body.classList.remove('navOpen');
-  });
-}
-toggleNav();
-
-
-
 });
