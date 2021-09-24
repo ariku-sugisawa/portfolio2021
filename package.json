@@ -31,7 +31,10 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "postcss": "^8.3.6",
-    "sass": "^1.41.1"
+    "sass": "^1.41.1",
+    "glob-parent": "^5.1.2",
+    "axios": "^0.21.2",
+    "set-value": "^4.0.1"
   },
   "browserslist": [
     "ie >= 11",
