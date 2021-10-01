@@ -1,0 +1,13 @@
+SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
+SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode
+
+
+AuthUserFile /home/xs457126/arikusugisawa.com/public_html/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Password required"
+AuthType Basic
+require valid-user
+
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>
