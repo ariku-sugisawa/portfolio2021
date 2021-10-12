@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="<?php echo $siteRoot; ?>common/css/vendor/sanitize.css" />
 	<link rel="stylesheet" href="<?php echo $siteRoot; ?>common/css/reset.css" />
 	<link rel="stylesheet" href="<?php echo $siteRoot; ?>common/css/base.css" />
+	<link rel="stylesheet" href="<?php echo $siteRoot; ?>common/css/modal.css" />
 	<link rel="stylesheet" href="<?php echo $siteRoot; ?>common/css/common.css" />
 	<link rel="stylesheet" href="https://use.typekit.net/err8nuo.css" />
 

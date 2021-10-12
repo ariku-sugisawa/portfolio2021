@@ -6,4 +6,5 @@
 		);
 </script>
 <script src="<?php echo $siteRoot; ?>common/js/vendor/jquery.easing.1.3.js"></script>
+<script src="<?php echo $siteRoot; ?>common/js/modal.js"></script>
 <script src="<?php echo $siteRoot; ?>common/js/common.js"></script>
